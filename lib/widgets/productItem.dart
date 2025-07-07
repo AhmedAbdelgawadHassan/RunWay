@@ -23,7 +23,7 @@ class _ProductitemState extends State<Productitem> {
         children: [
           Container(
             alignment: Alignment.center,
-            width: 180,
+            width: 185,
             height: 265,
             decoration: BoxDecoration(
               color: Color(0xffE3E3E3),
@@ -41,11 +41,14 @@ class _ProductitemState extends State<Productitem> {
               ],
             ),
           ),
-          Text(
-            widget.product.name,
-            maxLines: 1,
-            overflow: TextOverflow.ellipsis,
-            style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
+          SizedBox(
+            width: 185,
+            child: Text(
+              widget.product.name,
+              maxLines: 1,
+              overflow: TextOverflow.ellipsis,
+              style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
+            ),
           ),
           Row(
             mainAxisSize: MainAxisSize.min,

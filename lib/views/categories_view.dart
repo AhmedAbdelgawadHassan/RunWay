@@ -30,6 +30,46 @@ class CategoriesView extends StatelessWidget {
       price: "100€",
       image: "assets/images/models/model4.png",
     ),
+    ProductModel(
+      name: "Top Man Black",
+      price: "20€",
+      image: "assets/images/models/model1.png",
+    ),
+    ProductModel(
+      name: "Top man black with Trous..",
+      price: "50€",
+      image: "assets/images/models/model2.png",
+    ),
+    ProductModel(
+      name: "Deep gray essential regul..",
+      price: "26€",
+      image: "assets/images/models/model3.png",
+    ),
+    ProductModel(
+      name: "Gray coat and white T-sh..",
+      price: "100€",
+      image: "assets/images/models/model4.png",
+    ),
+    ProductModel(
+      name: "Top Man Black",
+      price: "20€",
+      image: "assets/images/models/model1.png",
+    ),
+    ProductModel(
+      name: "Top man black with Trous..",
+      price: "50€",
+      image: "assets/images/models/model2.png",
+    ),
+    ProductModel(
+      name: "Deep gray essential regul..",
+      price: "26€",
+      image: "assets/images/models/model3.png",
+    ),
+    ProductModel(
+      name: "Gray coat and white T-sh..",
+      price: "100€",
+      image: "assets/images/models/model4.png",
+    ),
   ];
 
   @override
@@ -53,19 +93,27 @@ class CategoriesView extends StatelessWidget {
               child: GridView.builder(
                 gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 2,
-              
-                  childAspectRatio: 0.58, ), 
-                  itemCount: products.length,
-              itemBuilder: (context, index)
-              {
-                return Productitem(product: products[index],onTap: () {
-                  Navigator.push(context, MaterialPageRoute(
-                    builder: (context) => ProductdetailsView()));
-                },);
-              
-              }),
+                  crossAxisSpacing: 1,
+                  childAspectRatio: 0.58,
+                ),
+                itemCount: products.length,
+                itemBuilder: (context, index) {
+                  return Productitem(
+                    product: products[index],
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => ProductdetailsView(
+                            productModel: products[index],
+                        ),
+                      ));
+                    },
+                  );
+                },
+              ),
             ),
-          )
+          ),
         ],
       ),
     );

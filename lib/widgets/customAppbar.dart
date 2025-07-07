@@ -14,8 +14,13 @@ class Customappbar extends StatelessWidget {
     return  Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-           SvgPicture.asset(
-            prefixIcon,
+           GestureDetector(
+            onTap: () {
+              Navigator.pop(context);
+            },
+             child: SvgPicture.asset(
+              prefixIcon,
+             ),
            ),
             Text(text,
               style: TextStyle(
